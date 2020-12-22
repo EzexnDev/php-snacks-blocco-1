@@ -1,5 +1,7 @@
 <?php
 
+/* PHP Snack 2 */
+
 $matches = [
     0 => [
         'Home_Team' => 'Libertas',
@@ -45,3 +47,25 @@ for ($i = 0; $i < count($matches); ++$i) {
     echo '<p>'.$matches[$i]['Home_Team'].' - '.$matches[$i]['Guest_Team'].' | '.$matches[$i]['Ht_Score'].' - '.$matches[$i]['Gt_Score'].'</p>';
 }
 ?>
+
+
+<?php
+
+/* PHP Snack 2 */
+
+$email_check = stripos($_GET['email'], '@');
+
+$email_check2 = stripos($_GET['email'], '.');
+
+$name = $_GET['nome'];
+
+$age = $_GET['age'];
+
+if (strlen($name) > 3 && $email_check2 !== false && $email_check !== false) {
+    echo 'Accesso Autorizzato';
+} else {
+    echo 'Accesso Negato';
+}
+
+?>
+
